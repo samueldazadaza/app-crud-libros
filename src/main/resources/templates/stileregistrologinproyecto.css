@@ -54,7 +54,7 @@
     color: white;
     text-decoration: underline;
 }
-.form-register .botons{
+.form-register .button{
     width: 100%;
     background: #1f53c5 ;
     border:none;
@@ -63,3 +63,13 @@
     margin: 16px 0;
     font: size 16px; 
 }
+
+.nav-link {
+    color: white;
+}
+
+.header {
+    background: url(Fondo.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+  }
