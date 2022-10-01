@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
+	        $('#userList').DataTable();
+	    } );
+	</script>
+
+    
+    <body>
+        <nav class="navbar navbar-expand-md" style="background: #1f53c5">
+            <div class="container">
+                <img src="Book icon.png" alt="Libro" width="30">
+                <a class="navbar-brand" href="#">StockLibros</a>
+                
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation"> 
+                    <div class="navbar-toggler-icon"></div> 
+                </button>
+    
+                <div class="collapse navbar-collapse" id="nav">
+                    <div class="btn-group" style="text-align:left;">
+                        <a href="Home.html" class="btn btn-primary" type="button">Home</a>
+                        <a href="Consultar.html" class="btn btn-secondary">Consultar</a>
+                        <a href="Registro.html" class="btn btn-secondary">Registro</a>
+                        <a href="Borrar.html"class="btn btn-dark">Borrar</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="btn btn-outline-info" type="button">LIBROS</a>
+                    </div>
+                </div>
+    
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Nombre, autor, código..." aria-label="Search"> 
+                    <button class="btn btn-outline-info" type="submit">Buscar</button>
+                </form>
+                
+                <a href="#" class="nav-link">Perfil</a> 
+                <img src="Profile.png" alt="Profile" width="30">
+    
+            </div>
+        </nav>
+        
+        <br>
+        <br>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Lista de Libros</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="userList" class="table table-bordered table-hover table-striped">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Autor</th>
+                                <th scope="col">Género</th>
+                                <th scope="col">Cantidad</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Harry Potter y la Piedra Filosofal</td>
+                                <td>JK Rowling</td>
+                                <td>Fantasía</td>
+                                <td>15</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Cien Años de Soledad</td>
+                                <td>Gabriel García Marquez</td>
+                                <td>Novela</td>
+                                <td>12</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        
+    </body>
+</html>
