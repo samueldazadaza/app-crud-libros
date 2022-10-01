@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Consulta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <body>
+        <nav class="navbar navbar-expand-md" style="background: #1f53c5">
+            <div class="container">
+                <img src="Book icon.png" alt="Libro" width="30">
+                <a class="navbar-brand" href="#">StockLibros</a>
+                
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation"> 
+                    <div class="navbar-toggler-icon"></div> 
+                </button>
+    
+                <div class="collapse navbar-collapse" id="nav">
+                    <div class="btn-group" style="text-align:left;">
+                        <a href="Home.html" class="btn btn-primary" type="button">Home</a>
+                        <a href="Consultar.html" class="btn btn-secondary">Consultar</a>
+                        <a href="Registro.html" class="btn btn-secondary">Registro</a>
+                        <a class="btn btn-dark">Borrar</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="btn btn-outline-info" type="button">LIBROS</a>
+                    </div>
+                </div>
+    
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Nombre, autor, código..." aria-label="Search"> 
+                    <button class="btn btn-outline-info" type="submit">Buscar</button>
+                </form>
+                
+                <a href="#" class="nav-link">Perfil</a> 
+                <img src="Profile.png" alt="Profile" width="30">
+    
+            </div>
+
+        </nav>
+
+        <br>
+        <br>
+
+        <div class="container d-block">
+
+            <h4>Filtrar por:</h4>
+
+            <div class="btn-group dropend">
+             <button type="button" class="btn btn-lg btn-primary">Opciones
+
+             </button>
+             <button type="button" class="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+             <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Género</a></li>
+                <li><a class="dropdown-item" href="#">Autor</a></li>
+                <li><a class="dropdown-item" href="#">Código</a></li>
+                 </ul>
+            </div>
+
+            <br>
+            <br>
+
+            <div>
+                <button class="btn btn-primary" type="button">Quitar Filtro</button>
+            </div>
+        </div>
+        
+        
+
+    </body>
