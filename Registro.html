@@ -23,7 +23,7 @@
                         <a href="Home.html" class="btn btn-primary" type="button">Home</a>
                         <a href="Consultar.html" class="btn btn-secondary">Consultar</a>
                         <a href="Registro.html" class="btn btn-secondary">Registro</a>
-                        <a class="btn btn-dark">Borrar</a>
+                        <a href="Borrar.html" class="btn btn-dark">Borrar</a>
                     </div>
                     <div class="nav-item">
                         <a href="#" class="btn btn-outline-info" type="button">LIBROS</a>
@@ -43,64 +43,60 @@
         
         <br>
         <br>
-
-        <div class="container">
-            <table class=" table table-primary table-hover table-bordered" style= "text-align: center" style="width:100%">
-
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Cantidad</th>
-                    </tr>
-                </thead>
-
-                <tbody class="table-group-divider">
-                    <tr style="height:100px">
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                    </tr>
-                </tbody>
-
-                <tbody>
-                    <tr style="height:100px">
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                    </tr>
-                </tbody>
-
-                <tbody>
-                    <tr style="height:100px">
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                    </tr>
-                </tbody>
-
-                <tbody>
-                    <tr style="height:100px">
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-            <div style="text-align:center;">
-
-            <button class="btn btn-primary" onclick="message()" >Guardar</button>
-            <button class="btn btn-secondary" onclick="message()" >Cancelar</button>
-
+        
+        <div class="card">
+        <div class="card-header">
+            <h4>Registro de Libros</h4>
+        </div>
+            <div class="card-body container">
+                    <form class="form" role="form" autocomplete="off">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Fecha</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">
+                                Nombre</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">
+                                Autor</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Género</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Cantidad</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="number">
+                            </div>
+                        </div>
+                       
+                        <br>
+                        <div class="form-group row">
+                            <div class="col-lg-12 text-center">
+                                <input type="button" class="btn btn-primary"
+                                    value="Guardar">
+                                <input type="reset" class="btn btn-secondary" value="Cancelar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+
 
     </body>
 </html>
