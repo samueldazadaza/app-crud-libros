@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080/books/'; //cambiar esta url por la url local de su api rest de libros
+const url = 'http://localhost:8080/libros'; //cambiar esta url por la url local de su api rest de libros
 
 //CODIGO PARA CREAR DATA DE API
 
@@ -17,6 +17,9 @@ fetch(url)
 });
 
 function mostrarArreglo(libros){
+    const idlibro = document.querySelector("#idlibro");
+    idlibro.innerHTML = '';
+
     const titulolibro = document.querySelector("#titulolibro");
     titulolibro.innerHTML = '';
 
@@ -36,6 +39,10 @@ function mostrarArreglo(libros){
         genero.innerText = libro.genero;
         generolibro.appendChild(genero);
 
+        let id = document.createElement('p');
+        id.innerText = libro.id_libro;
+        idlibro.appendChild(id);
+
         let titulo = document.createElement('p');
         titulo.innerText = libro.titulo;
         titulolibro.appendChild(titulo);
@@ -54,5 +61,6 @@ function mostrarArreglo(libros){
 }
 
 //CODIGO PARA ACTUALIZAR DATA DE API
+
 
 //CODIGO PARA ELIMINAR DATA DE API
