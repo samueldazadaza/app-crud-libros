@@ -1,135 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Registro</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <body>
-        <nav class="navbar navbar-expand-md" style="background: #1f53c5">
-            <div class="container">
-                <img src="Book icon.png" alt="Libro" width="30">
-                <a class="navbar-brand" href="#">StockLibros</a>
-                
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation"> 
-                    <div class="navbar-toggler-icon"></div> 
-                </button>
-    
-                <div class="collapse navbar-collapse" id="nav">
-                    <div class="btn-group" style="text-align:left;">
-                        <a href="Home.html" class="btn btn-primary" type="button">Home</a>
-                        <a href="Consultar.html" class="btn btn-secondary">Consultar</a>
-                        <a href="Registro.html" class="btn btn-secondary">Registro-Edición-Borrar</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#" class="btn btn-outline-info" type="button">LIBROS</a>
-                    </div>
-                </div>
-    
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Nombre, autor, código..." aria-label="Search"> 
-                    <button class="btn btn-outline-info" type="submit">Buscar</button>
-                </form>
-                
-                <a href="#" class="nav-link">Perfil</a> 
-                <img src="Profile.png" alt="Profile" width="30">
-    
-            </div>
-        </nav>
-        
-        <br>
-        <br>
-        
-        <div class="card m-5">
-            <div class="card-header">
-                <h4>Registro de Libros</h4>
-            </div>
-                <div class="card-body container">
-                    <form class="form" role="form" autocomplete="off" onsubmit="onFormSubmit()">
-                            <div class="form-group row d-none">
-                                    <label class="col-lg-3 col-form-label form-control-label">ID</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="number" id="id" >
-                                    </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">
-                                        Nombre</label>
-                                <div class="col-lg-9">
-                                        <input class="form-control" type="text" name="nombre" id="nombre">
-                                </div>
-                            </div>
+  <head>
+    <title>Registro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous"
+  />
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <nav class="navbar navbar-expand-md" style="background: #1f53c5">
+      <div class="container">
+        <img src="Book icon.png" alt="Libro" width="30" />
+        <a class="navbar-brand" href="#">StockLibros</a>
 
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">
-                                        Autor</label>
-                                <div class="col-lg-9">
-                                        <input class="form-control" type="text" name="autor" id="autor">
-                                </div>
-                            </div>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-label="Expand Navigation"
+        >
+          <div class="navbar-toggler-icon"></div>
+        </button>
 
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Género</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="text" name="genero" id="genero">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Cantidad</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="number" name="cantidad" id="cantidad">
-                                </div>
-                            </div>
-                            
-                            <br>
-
-                            <div class="form-group row" class="form_action--button">
-                                <div class="col-lg-12 text-center">
-                                    <input type="button" class="btn btn-primary"
-                                            value="Guardar" onclick="registrarEstudiante()">
-                                    <input type="reset" class="btn btn-secondary" value="Cancelar">
-                                </div>
-                            </div>
-                    </form>
-                </div>
+        <div class="collapse navbar-collapse" id="nav">
+          <div class="btn-group" style="text-align: left">
+            <a href="Home.html" class="btn btn-primary" type="button">Home</a>
+            <a href="Consultar.html" class="btn btn-secondary">Consultar</a>
+            <a href="Registro.html" class="btn btn-secondary"
+              >Registro-Edición-Borrar</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="#" class="btn btn-outline-info" type="button">LIBROS</a>
+          </div>
         </div>
 
-        <div class="tab-content m-5" id="myTabContent">
-            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Lista de Libros</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="storeList" class="table table-bordered table-hover table-striped">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Autor</th>
-                                    <th scope="col">Género</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col"></th>
-    
-                                </tr>
-                                </thead>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Nombre, autor, código..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">Buscar</button>
+        </form>
 
-                                <tbody id="tablebody">
+        <a href="#" class="nav-link">Perfil</a>
+        <img src="Profile.png" alt="Profile" width="30" />
+      </div>
+    </nav>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+    <br />
+    <br />
+
+    <div class="card m-5">
+      <div class="card-header">
+        <h4>Registro de Libros</h4>
+      </div>
+      <div class="card-body container">
+        <form
+          class="form"
+          role="form"
+          autocomplete="off"
+          onsubmit="onFormSubmit()"
+        >
+          <div class="form-group row d-none">
+            <label class="col-lg-3 col-form-label form-control-label">ID</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="number" id="id_libro" />
             </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-lg-3 col-form-label form-control-label">
+              Titulo</label
+            >
+            <div class="col-lg-9">
+              <input
+                class="form-control"
+                type="text"
+                name="titulo"
+                id="titulo"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-lg-3 col-form-label form-control-label">
+              Autor</label
+            >
+            <div class="col-lg-9">
+              <input class="form-control" type="text" name="autor" id="autor" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-lg-3 col-form-label form-control-label"
+              >Género</label
+            >
+            <div class="col-lg-9">
+              <input
+                class="form-control"
+                type="text"
+                name="genero"
+                id="genero"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-lg-3 col-form-label form-control-label"
+              >Cantidad</label
+            >
+            <div class="col-lg-9">
+              <input
+                class="form-control"
+                type="number"
+                name="cantidad"
+                id="cantidad"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="form-group row" class="form_action--button">
+            <div class="col-lg-12 text-center">
+              <input
+                type="button"
+                class="btn btn-primary"
+                value="Guardar"
+                onclick="registrarEstudiante()"
+              />
+              <input type="reset" class="btn btn-secondary" value="Cancelar" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="tab-content m-5" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="list"
+        role="tabpanel"
+        aria-labelledby="list-tab"
+      >
+        <div class="card">
+          <div class="card-header">
+            <h4>Lista de Libros</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table
+                id="storeList"
+                class="table table-bordered table-hover table-striped"
+              >
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+
+                <tbody id="tablebody"></tbody>
+              </table>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="./script.js"></script>
-
-</body>
+  </body>
 </html>

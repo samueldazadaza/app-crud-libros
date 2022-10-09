@@ -53,6 +53,7 @@ const mostrarData = (data) => {
 
 
 
+
 //CODIGO PARA LEER DATA DE API
 // fetch(url)
 // .then((resp) => resp.json())
